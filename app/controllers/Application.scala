@@ -10,4 +10,8 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready.", Thing("Test thing", 10)))
   }
   
+  def error = Action {
+    controllers.Application.Status(403)
+  }
+  
 }
